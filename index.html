@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo | Cleudilene Alves Ferreira</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #de4bb9;
+    --dark: #333;
+    --light: #f5f7fa;
+    --gray: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--light);
+    padding: 20px;
+}
+
+/* BOTÃO FLUTUANTE */
+.print-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.50);
+    z-index: 999;
+}
+
+.print-btn:hover {
+    background: #f556c8;
+}
+
+/* CONTAINER */
+.resume {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.50);
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, var(--primary), #de4bb9);
+    color: #fff;
+    padding: 35px 30px;
+    text-align: center;
+    /*border-radius: 25px;*/
+
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+
+}
+
+.header p {
+    font-size: 16px;
+
+}
+
+/* CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #fff7fd;
+    padding: 30px;
+	
+}
+
+.sidebar h2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.contact p {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.contact i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+/* MAIN */
+.main {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 28px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.section p {
+    font-size: 15px;
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+.job {
+    margin-bottom: 18px;
+}
+
+.job strong {
+    font-size: 16px;
+    color: var(--dark);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .print-btn {
+        bottom: 18px;
+        right: 18px;
+        padding: 14px;
+        border-radius: 50%;
+    }
+
+    .print-btn span {
+        display: none;
+    }
+}
+
+/* IMPRESSÃO A4 */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    .resume {
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .sidebar h2,
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .contact p,
+    .section p,
+    .job {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .sidebar,
+    .main {
+        padding: 34px;
+    }
+}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">
+    <i class="fas fa-print"></i>
+    <span>Imprimir / Salvar em PDF</span>
+</button>
+
+<div class="resume">
+
+    <div class="header">
+        <h1>CLEUDILENE ALVES FERREIRA</h1>
+        <p>Auxiliar de Serviços Gerais | Auxiliar de Produção</p>
+    </div>
+
+    <div class="content">
+
+        <aside class="sidebar">
+            <h2>Contato</h2>
+            <div class="contact">
+                <p><i class="fas fa-envelope"></i> cleudilene.alves.f@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (11) 97071-3415</p>
+                <p><i class="fas fa-location-dot"></i> Baeta Neves, SBC/SP</p>
+            </div>
+
+            <h2>Educação</h2>
+            <p><strong>Ensino Médio Completo</strong><br>E.E. Maria C. Schmidt Miranda</p>
+            <p><strong>Informática Básica</strong><br>Help Byte do Brasil</p>
+        </aside>
+
+        <main class="main">
+            <div class="section">
+                <h2>Objetivo</h2>
+                <p>
+                    Atuar como Auxiliar de Serviços Gerais ou Auxiliar de Produção,
+                    contribuindo com organização, responsabilidade e comprometimento.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Experiência Profissional</h2>
+
+                <div class="job">
+                    <strong>Rassini – NHK Automotive</strong><br>
+                    Auxiliar de Produção — Jan/2024 até Out/2025
+                </div>
+
+                <div class="job">
+                    <strong>Autônoma</strong><br>
+                    Cuidadora de Idosos — Jun/2015 a Dez/2023<br>
+                    Empregada Doméstica — Set/2011 a Jun/2015
+                </div>
+
+                <div class="job">
+                    <strong>Perfil Limpeza e Conservação S/S LTDA ME</strong><br>
+                    Auxiliar de Limpeza Geral — Fev/2011 a Jun/2011
+                </div>
+
+                <div class="job">
+                    <strong>Gilberto do Carmo Cipriano</strong><br>
+                    Auxiliar de Serviços Gerais — Fev/2010 a Mar/2010
+                </div>
+
+                <div class="job">
+                    <strong>Work Terceirização de Mão de Obra LTDA</strong><br>
+                    Auxiliar de Limpeza Geral — Set/2009 a Jan/2010
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+</body>
+</html>
