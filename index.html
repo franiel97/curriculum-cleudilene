@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Currículo | Cleudilene Alves Ferreira</title>
+<title></title>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
@@ -351,7 +351,7 @@ body {
 <div class="resume">
 
 <header class="header">
-    <h1>CLEUDILENE ALVES FERREIRA</h1>
+    <h1 id="nome">Cleudilene Alves Ferreira</h1>
     <p>Auxiliar de Serviços Gerais | Auxiliar de Produção | Operadora de Máquina</p>
 	<p id="local">📍 Baeta Neves, São Bernardo do Campo - SP</p>
 
@@ -438,7 +438,24 @@ body {
 <!--<button onclick="window.print()"><i class="fas fa-print"></i></button>-->
 
 </div>
+<script>
+  const elementoTitulo = document.getElementById('nome');
 
+  function atualizarTitulo() {
+    document.title = ('Currículo | ' + elementoTitulo.textContent.trim());
+  }
+	
+  // Define o título assim que a página carrega
+  atualizarTitulo();
+
+  // Observa mudanças no conteúdo do elemento e atualiza o título automaticamente
+  const observer = new MutationObserver(atualizarTitulo);
+  observer.observe(elementoTitulo, { 
+    childList: true,   // mudanças no texto/filhos
+    characterData: true, 
+    subtree: true 
+  });
+</script>
 
 </body>
 
